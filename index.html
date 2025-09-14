@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name — developer, designer, creator." />
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Developer, designer, and maker. Projects, blog links, and contact." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Favicon (SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%91%8B%3C/text%3E%3C/svg%3E">
+
+  <!-- Minimal reset + utility CSS -->
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      --accent: #8b5cf6;
+      --muted: #9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+      --radius: 14px;
+      color-scheme: dark;
+      --max-width: 1000px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(139,92,246,0.06), transparent),
+                  radial-gradient(900px 450px at 90% 90%, rgba(14,165,233,0.03), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      gap:24px;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .logo{
+      display:flex;align-items:center;gap:12px;font-weight:600;font-size:18px
+    }
+    .logo .mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:grid;place-items:center;font-weight:700}
+
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+    nav a:hover{color:var(--accent);background:var(--glass)}
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: 0 6px 24px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      backdrop-filter: blur(6px) saturate(1.05);
+    }
+
+    .intro h1{font-size:28px;margin:0 0 8px}
+    .intro p{margin:0 0 16px;color:var(--muted)}
+    .cta{display:flex;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .profile{
+      display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:32px
+    }
+    .avatar{width:140px;height:140px;border-radius:18px;background:linear-gradient(180deg,#111827,#0b1220);display:grid;place-items:center;font-size:44px}
+    .role{color:var(--muted);font-size:13px}
+    .stats{display:flex;gap:14px;margin-top:6px}
+    .stat{padding:8px 12px;background:rgba(255,255,255,0.02);border-radius:10px}
+
+    /* Projects grid */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+    .project{display:flex;flex-direction:column;gap:8px;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    .project h3{margin:0;font-size:15px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+      .profile{padding:20px}
+    }
+
+    /* small screens
+    */
+    @media (max-width:520px){
+      header{flex-direction:column;align-items:flex-start}
+      .logo{font-size:16px}
+    }
+
+    /* tiny utility */
+    .muted{color:var(--muted)}
+  </style>
+
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">
+        <div class="mark">YN</div>
+        <div>
+          <div>Your Name</div>
+          <div class="muted" style="font-size:12px">Developer • Designer • Creator</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn secondary">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <!-- left column: intro + projects -->
+      <section class="card intro">
+        <h1>Hi — I’m <span style="color:var(--accent)">Your Name</span>.</h1>
+        <p>I build delightful web apps and beautiful UI experiences. I’m a full‑stack developer who loves JavaScript, performance, and thoughtful design.</p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn secondary" href="mailto:your.email@example.com">Email me</a>
+        </div>
+
+        <h2 style="margin-top:22px;font-size:16px">Featured projects</h2>
+        <div class="projects" id="projects">
+          <article class="project">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+              <h3>Project A</h3>
+              <div class="muted" style="font-size:12px">2025</div>
+            </div>
+            <p>Progressive web app for tracking habits. Offline-first, sync, and delightful animations.</p>
+            <div class="tags"><span class="tag">PWA</span><span class="tag">React</span><span class="tag">IndexedDB</span></div>
+            <div style="margin-top:8px"><a class="btn secondary" href="#" target="_blank">View repo</a></div>
+          </article>
+
+          <article class="project">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+              <h3>Project B</h3>
+              <div class="muted" style="font-size:12px">2024</div>
+            </div>
+            <p>Design system and component library used across multiple products — accessible and themeable.</p>
+            <div class="tags"><span class="tag">Design</span><span class="tag">UI Kit</span><span class="tag">TypeScript</span></div>
+            <div style="margin-top:8px"><a class="btn secondary" href="#" target="_blank">Live demo</a></div>
+          </article>
+
+          <article class="project">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+              <h3>Project C</h3>
+              <div class="muted" style="font-size:12px">2023</div>
+            </div>
+            <p>Small e‑commerce front-end with fast LCP and accessible checkout flow.</p>
+            <div class="tags"><span class="tag">Next.js</span><span class="tag">Performance</span></div>
+            <div style="margin-top:8px"><a class="btn secondary" href="#" target="_blank">Case study</a></div>
+          </article>
+
+          <article class="project">
+            <div style="display:flex;justify-content:space-between;align-items:start">
+              <h3>Project D</h3>
+              <div class="muted" style="font-size:12px">2022</div>
+            </div>
+            <p>Open-source CLI tooling to scaffold projects and improve DX for teams.</p>
+            <div class="tags"><span class="tag">CLI</span><span class="tag">Open Source</span></div>
+            <div style="margin-top:8px"><a class="btn secondary" href="#" target="_blank">GitHub</a></div>
+          </article>
+        </div>
+
+        <section id="skills" style="margin-top:20px">
+          <h2 style="font-size:16px;margin-bottom:10px">Skills</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">HTML & CSS</span>
+            <span class="tag">Accessibility</span>
+            <span class="tag">Testing</span>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- right column: profile card -->
+      <aside class="card profile">
+        <div class="avatar">YN</div>
+        <div style="font-weight:700">Your Name</div>
+        <div class="role">Frontend Engineer • Open-source enthusiast</div>
+
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><div style="font-weight:700">8+</div><div class="muted" style="font-size:12px">Years</div></div>
+          <div class="stat" role="listitem"><div style="font-weight:700">20+</div><div class="muted" style="font-size:12px">Projects</div></div>
+          <div class="stat" role="listitem"><div style="font-weight:700">1500</div><div class="muted" style="font-size:12px">Commits</div></div>
+        </div>
+
+        <hr style="width:100%;border:none;border-top:1px solid rgba(255,255,255,0.03);margin:16px 0">
+
+        <div style="width:100%;text-align:left">
+          <h3 style="margin:0 0 6px">Contact</h3>
+          <p class="muted" style="margin:0 0 12px;font-size:13px">Interested in working together? Send a quick message.</p>
+          <a class="btn" href="mailto:your.email@example.com">Email</a>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn secondary" href="#">GitHub</a>
+            <a class="btn secondary" href="#">LinkedIn</a>
+          </div>
+        </div>
+
+        <footer style="width:100%;margin-top:14px">Based in Lagos • Open to remote work</footer>
+      </aside>
+
+    </main>
+
+    <footer style="margin-top:22px;text-align:center;color:var(--muted);font-size:13px">
+      Built with ❤️ — <span class="muted">This single file is ready to drop into a GitHub Pages branch.</span>
+    </footer>
+
+  </div>
+
+  <!-- small JS: auto-fill your details and simple interactions -->
+  <script>
+    // Replace placeholders with your info easily
+    (function(){
+      const NAME = 'Your Name';
+      const EMAIL = 'your.email@example.com';
+      const LOCATION = 'Lagos';
+
+      document.title = NAME + ' — Portfolio';
+      // update visible text nodes
+      document.querySelectorAll('[data-name]').forEach(n=>n.textContent = NAME);
+      document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.href = 'mailto:'+EMAIL);
+      // small safe replacement for the avatar initials
+      const avatar = document.querySelector('.avatar');
+      if(avatar) avatar.textContent = NAME.split(' ').map(s=>s[0]||'').slice(0,2).join('').toUpperCase();
+      // update location text if present
+      document.querySelectorAll('footer').forEach(f=>{ if(f.textContent.includes('Lagos')) f.textContent = 'Based in ' + LOCATION + ' • Open to remote work' });
+    })();
+  </script>
+</body>
+</html>
