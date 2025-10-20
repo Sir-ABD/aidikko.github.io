@@ -764,4 +764,723 @@
             line-height: 1.6;
         }
 
-        .cta-box .btn-pri
+        .cta-box .btn-primary {
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            background: var(--primary-dark);
+        }
+
+        .scroll-top.show {
+            display: flex;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .profile-circle {
+                width: 250px;
+                height: 250px;
+            }
+
+            .profile-circle i {
+                font-size: 7rem;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding-left: 50px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                grid-column: 1;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .profile-circle {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-circle i {
+                font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">A.I DIKKO</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Abdulrazaq Isah Dikko</h1>
+                <p class="subtitle">A.I DIKKO</p>
+                <p>Machine Learning Engineer | Data Scientist | AI Enthusiast | Cybersecurity Professional</p>
+                <p>Transforming data into intelligent solutions and empowering the next generation through technology education.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-circle">
+                    <i class="fas fa-brain"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Passionate About Innovation & Education</h3>
+                    <p>I am a dedicated Computer Science student with a deep passion for Artificial Intelligence, Machine Learning, and Data Science. As the CEO and Founder of AfroCode Academy, I'm committed to bridging the digital skills gap by mentoring young Africans in technology.</p>
+                    <p>My expertise spans across various domains including deep learning, cybersecurity, and data analytics. I believe in the power of technology to transform lives and communities, and I'm constantly seeking opportunities to collaborate on innovative projects that make a real-world impact.</p>
+                    <p>Currently seeking international scholarships, research collaborations, and job opportunities where I can contribute my skills while continuing to grow professionally.</p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <strong>Full Name</strong>
+                            <span>Abdulrazaq Isah Dikko</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <span>Zaria, Kaduna, Nigeria</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <span>abdulrazaqisahdikko334@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <span>+234 9063199108</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <strong>Interests</strong>
+                            <span>Research, Coding, Reading</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>Soft Skills</strong>
+                            <span>Communication, Teamwork, Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">R</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> ML & AI Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-bar"></i> Data Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Google Colab</span>
+                        <span class="skill-tag">PyCharm</span>
+                        <span class="skill-tag">Kali Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>CEO & Founder</h3>
+                        <div class="date">Present</div>
+                        <h4>AfroCode Academy</h4>
+                        <p>Leading an educational initiative dedicated to teaching and mentoring young people in digital skills. Empowering the next generation of African tech professionals through comprehensive training programs and hands-on projects.</p>
+                        <a href="" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Visit AfroCode Academy →</a>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Computer Science Teacher</h3>
+                        <div class="date">May 2023 - November 2023</div>
+                        <h4>Wisdom Academy</h4>
+                        <p>Taught Computer Science to primary school students, developing curriculum and lesson plans. Gained valuable experience in team coordination, classroom management, and leadership while fostering young minds' interest in technology.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Hackathon Participant</h3>
+                        <div class="date">September 2024</div>
+                        <h4>BLOCKDAG Hackathon Kano</h4>
+                        <p>Participated in the BLOCKDAG Hackathon where our team pitched LuckyBET, a decentralized betting platform built on the Blockdag blockchain. Demonstrated skills in blockchain technology, team collaboration, and innovative problem-solving.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Car Price Prediction</h3>
+                        <p>Machine learning model to predict car prices based on various features using regression techniques and data analysis.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">Pandas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Customer Segmentation</h3>
+                        <p>K-means clustering algorithm to segment customers based on purchasing behavior and demographics for targeted marketing.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">K-means</span>
+                            <span class="tech-badge">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Titanic Survival Prediction</h3>
+                        <p>Classification model predicting passenger survival rates using the famous Titanic dataset with advanced ML techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Classification</span>
+                            <span class="tech-badge">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Maternal Risk Prediction</h3>
+                        <p>Healthcare AI model predicting maternal health risks during pregnancy using medical indicators and machine learning.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Healthcare AI</span>
+                            <span class="tech-badge">ML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Spam Email Detection</h3>
+                        <p>Natural language processing model to classify emails as spam or legitimate communications with high accuracy.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">NLP</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Classification</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Handwriting Digit Recognition</h3>
+                        <p>Deep learning model recognizing handwritten digits using neural networks and the MNIST dataset.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Deep Learning</span>
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">CNN</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Crop Yield Prediction</h3>
+                        <p>Agricultural AI system predicting crop yields based on environmental and soil factors for better farming decisions.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Regression</span>
+                            <span class="tech-badge">AgriTech</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Face Emotion Recognition</h3>
+                        <p>Computer vision model detecting and classifying human emotions from facial expressions using deep learning.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">Computer Vision</span>
+                            <span class="tech-badge">CNN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/Sir-ABD" target="_blank" class="btn btn-primary" style="color: white; background: var(--primary);">View All Projects on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <h3>Federal University Dutse (FUD)</h3>
+                    <div class="degree">Bachelor of Science in Computer Science</div>
+                    <div class="date">2023 - 2027 (In Progress)</div>
+                    <p>Pursuing a comprehensive education in Computer Science with focus on Artificial Intelligence, Machine Learning, and Software Development. Located in Jigawa State, Nigeria.</p>
+                </div>
+                <div class="education-item">
+                    <h3>Namadi Sambo Skill Acquisition Center</h3>
+                    <div class="degree">Diploma in Computer Science</div>
+                    <div class="date">Completed</div>
+                    <p>Gained foundational knowledge in computer science principles, programming, and practical technology skills through intensive training programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-info">
+                        <h4>Facial Expressions Recognition using PyTorch</h4>
+                        <p>Coursera • January 2025</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-info">
+                        <h4>Image Segmentation</h4>
+                        <p>Coursera • January 2025</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-info">
+                        <h4>Understanding Artificial Intelligence</h4>
+                        <p>DataCamp</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-info">
+                        <h4>Business Analytics and Process Management</h4>
+                        <p>Coursera</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-info">
+                        <h4>Overview of Data Visualization</h4>
+                        <p>United Latino Students • February 2025</p>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-info">
+                        <h4>Python Programming</h4>
+                        <p>Kaggle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <p>Zaria, Kaduna, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>abdulrazaqisahdikko334@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+234 9063199108</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <h3 style="margin-bottom: 1rem; color: var(--secondary);">Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/Sir-ABD" target="_blank" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/abdulrazaq-isah-dikko-21a127322" target="_blank" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://x.com/DikkoIsah99418" target="_blank" class="social-link" title="Twitter/X">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.kaggle.com/abdulrazaqisahdikko" target="_blank" class="social-link" title="Kaggle">
+                                <i class="fab fa-kaggle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-box">
+                    <h3>Let's Collaborate!</h3>
+                    <p>I'm actively seeking international scholarships, research collaborations, and job opportunities in AI, Machine Learning, and Data Science.</p>
+                    <p>Whether you have an exciting project, research opportunity, or just want to discuss technology and innovation, I'd love to hear from you!</p>
+                    <a href="mailto:abdulrazaqisahdikko334@gmail.com" class="btn btn-primary">Send Me an Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Abdulrazaq Isah Dikko (A.I DIKKO). All rights reserved.</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">Built with passion for innovation and education</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards, education items, etc.
+        document.querySelectorAll('.project-card, .education-item, .skill-category, .cert-item, .timeline-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add active state to navigation links based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
