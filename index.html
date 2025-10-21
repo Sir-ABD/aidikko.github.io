@@ -249,6 +249,13 @@
             border: 5px solid rgba(255,255,255,0.3);
             animation: float 3s ease-in-out infinite;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile-circle i {
@@ -967,7 +974,10 @@
             </div>
             <div class="hero-image">
                 <div class="profile-circle">
-                    <i class="fas fa-brain"></i>
+                    <!-- Replace 'your-photo.jpg' with your actual photo filename -->
+                    <img src="w9gj59.jpg" alt="Abdulrazaq Isah Dikko" id="profilePhoto">
+                    <!-- Fallback icon if image doesn't load -->
+                    <i class="fas fa-brain" id="fallbackIcon" style="display: none;"></i>
                 </div>
             </div>
         </div>
@@ -1087,7 +1097,7 @@
                         <div class="date">Present</div>
                         <h4>AfroCode Academy</h4>
                         <p>Leading an educational initiative dedicated to teaching and mentoring young people in digital skills. Empowering the next generation of African tech professionals through comprehensive training programs and hands-on projects.</p>
-                        <a href="" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Visit AfroCode Academy →</a>
+                        <a href="https://github.com/afrocode-academy" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Visit AfroCode Academy →</a>
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
@@ -1481,6 +1491,17 @@
                 }
             });
         });
+
+        // Handle profile photo loading
+        const profilePhoto = document.getElementById('profilePhoto');
+        const fallbackIcon = document.getElementById('fallbackIcon');
+        
+        if (profilePhoto) {
+            profilePhoto.addEventListener('error', function() {
+                this.style.display = 'none';
+                fallbackIcon.style.display = 'flex';
+            });
+        }
     </script>
 </body>
 </html>
